@@ -19,6 +19,14 @@
 - 🔐 **用户认证**: 内置登录系统，支持两步验证(2FA)
 - 🐳 **多架构支持**: 同时支持 amd64 和 arm64
 
+### 📸 界面预览
+
+<p align="center">
+  <img src="docs/images/screenshot-home.jpg" width="250" alt="首页">
+  <img src="docs/images/screenshot-download.jpg" width="250" alt="下载">
+  <img src="docs/images/screenshot-batch.jpg" width="250" alt="批量下载">
+</p>
+
 ### 📦 快速开始
 
 #### Docker 运行
@@ -31,7 +39,7 @@ docker pull snakebang007/video-downloader:latest
 docker run -d \
   --name video-downloader \
   -p 5000:5000 \
-  -v /your/data/path:/app/data/downloads \
+  -v /your/data/path:/app/data \
   snakebang007/video-downloader:latest
 ```
 
@@ -46,7 +54,7 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - ./data:/app/data/downloads
+      - ./data:/app/data
     restart: unless-stopped
 ```
 
@@ -58,7 +66,7 @@ services:
 
 | 挂载目录 | 说明 |
 |---------|------|
-| `/app/data/downloads` | 数据目录（下载文件） |
+| `/app/data` | 数据目录（数据库、下载文件、配置等） |
 
 ### 🚀 首次使用
 
@@ -103,6 +111,14 @@ A Docker-based video/image downloader supporting Douyin (TikTok China), Xiaohong
 - 🔐 **Authentication**: Built-in login system with 2FA support
 - 🐳 **Multi-arch**: Supports both amd64 and arm64
 
+### 📸 Screenshots
+
+<p align="center">
+  <img src="docs/images/screenshot-home.jpg" width="250" alt="Home">
+  <img src="docs/images/screenshot-download.jpg" width="250" alt="Download">
+  <img src="docs/images/screenshot-batch.jpg" width="250" alt="Batch Download">
+</p>
+
 ### 📦 Quick Start
 
 #### Docker Run
@@ -115,7 +131,7 @@ docker pull snakebang007/video-downloader:latest
 docker run -d \
   --name video-downloader \
   -p 5000:5000 \
-  -v /your/data/path:/app/data/downloads \
+  -v /your/data/path:/app/data \
   snakebang007/video-downloader:latest
 ```
 
@@ -130,7 +146,7 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - ./data:/app/data/downloads
+      - ./data:/app/data
     restart: unless-stopped
 ```
 
@@ -142,7 +158,7 @@ services:
 
 | Volume | Description |
 |--------|-------------|
-| `/app/data/downloads` | Data directory (database + downloads) |
+| `/app/data` | Data directory (database, downloads, config) |
 
 ### 🚀 First Time Setup
 
